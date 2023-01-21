@@ -75,7 +75,7 @@ Test receiving Line Bot messages and pushing messages.
    <img width="762" alt="Screenshot 2023-01-21 at 12 25 30 PM" src="https://user-images.githubusercontent.com/25980598/213843298-5ed36e57-ddc2-4fe5-8eff-9bfca8966f17.png">
 
 * 取得指定 user 傳送的訊息 `http://localhost:8080/v1/messages?bot_user_id=<bot_user_id>`
-   <img width="762" alt="Screenshot 2023-01-21 at 12 25 30 PM" src="https://user-images.githubusercontent.com/25980598/213843260-38c87b89-9b22-4e22-9d11-ef817fb4e316.png">
+   <img width="769" alt="Screenshot 2023-01-21 at 12 26 12 PM" src="https://user-images.githubusercontent.com/25980598/213877304-9255ae02-2567-4f10-bdc9-bfecd00669c0.png">
 
 * 主動推播訊息給 user `http://localhost:8080/v1/sendMessage`
    <img width="758" alt="Screenshot 2023-01-21 at 12 28 19 PM" src="https://user-images.githubusercontent.com/25980598/213843345-3abe0ab6-e645-40bd-bd00-5b6d573bf767.png">
