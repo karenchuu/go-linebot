@@ -68,6 +68,7 @@
 Test receiving Line Bot messages and pushing messages.
 
 * 模擬 user 傳送 Line 訊息，收到訊息後，會將 user 資訊及訊息分別存入 MongoDB 的 `users` 和 `messages` 資料表
+
    <img width="469" alt="Screenshot 2023-01-21 at 12 16 18 PM" src="https://user-images.githubusercontent.com/25980598/213842974-f232c0f3-29b7-4524-bf0b-ac7083abb5e5.png">
 
 * 取得 user 資訊 `http://localhost:8080/v1/users`
