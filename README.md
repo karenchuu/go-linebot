@@ -62,4 +62,26 @@
 ├── go.sum
 ├── main.go
 ├── Makefile
+├── main.go
 ```
+## Test 
+Test receiving Line Bot messages and pushing messages.
+
+* 模擬 user 傳送 Line 訊息，收到訊息後，會將 user 資訊及訊息分別存入 MongoDB 的 `users` 和 `messages` 資料表
+   <img width="469" alt="Screenshot 2023-01-21 at 12 16 18 PM" src="https://user-images.githubusercontent.com/25980598/213842974-f232c0f3-29b7-4524-bf0b-ac7083abb5e5.png">
+
+* 取得 user 資訊 `http://localhost:8080/v1/users`
+   <img width="762" alt="Screenshot 2023-01-21 at 12 25 30 PM" src="https://user-images.githubusercontent.com/25980598/213843298-5ed36e57-ddc2-4fe5-8eff-9bfca8966f17.png">
+
+* 取得指定 user 傳送的訊息 `http://localhost:8080/v1/messages?bot_user_id=<bot_user_id>`
+   <img width="762" alt="Screenshot 2023-01-21 at 12 25 30 PM" src="https://user-images.githubusercontent.com/25980598/213843260-38c87b89-9b22-4e22-9d11-ef817fb4e316.png">
+
+* 主動推播訊息給 user `http://localhost:8080/v1/sendMessage`
+   <img width="758" alt="Screenshot 2023-01-21 at 12 28 19 PM" src="https://user-images.githubusercontent.com/25980598/213843345-3abe0ab6-e645-40bd-bd00-5b6d573bf767.png">
+   
+   <img width="473" alt="Screenshot 2023-01-21 at 12 29 10 PM" src="https://user-images.githubusercontent.com/25980598/213843370-94c4ce17-d380-4872-9db1-860ca734dc14.png">
+   
+* 影片版本（測試步驟跟上面一樣）
+![demo](https://user-images.githubusercontent.com/25980598/213842809-364e5967-ee7d-4346-8d2d-f7cd3f44aa89.gif)
+
+   
