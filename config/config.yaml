@@ -1,0 +1,12 @@
+mongodb:
+  host: "127.0.0.1"
+  user: "admin"
+  password: "pass"
+  port: 27017
+
+linebot:
+  channelSecret: "YOUR_LINE_CHANNEL_SECRET"
+  channelAccessToken: "YOUR_LINE_CHANNEL_ACCESS_TOKEN"
+
+server:
+  port: 8080
