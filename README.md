@@ -16,7 +16,7 @@
 * Start MongoDB container:
   `make up`
 
-## Got A LINE Bot API devloper account
+## Line Bot related settings
    Make sure you already registered on [LINE developer console](https://developers.line.biz/console/).
    1. Create new `Messaging Channel`
    2. Get `Channel Secret` on "Basic Setting" tab.
@@ -36,6 +36,9 @@
   # Move to the project root directory
   cd go-linebot
   ```
+* Modify the configuration
+  `config/config.yaml`
+  * `linebot.channelSecret` and `linebot.channelAccessToken` must be changed to the data obtained from the LINE Developer Console.
 
 * Run server:
     ```
