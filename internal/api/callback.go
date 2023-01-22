@@ -38,8 +38,7 @@ func LineCallbackHandler(c *gin.Context) {
 
 	client, ctx, err := db.ConnectDB()
 	if err != nil {
-		log.Fatal(err)
-		c.JSON(http.StatusInternalServerError, gin.H{"message": "Internal Server Error"})
+		c.JSON(http.StatusInternalServerError, gin.H{"message": fmt.Sprintf("Error connect db, err = %s", err)})
 		return
 	}
 
@@ -93,7 +92,7 @@ func LineCallbackHandler(c *gin.Context) {
 				result, err := usersCollection.InsertOne(ctx, user)
 				if err != nil {
 					log.Print(err)
-					c.JSON(http.StatusInternalServerError, gin.H{"message": "Internal Server Error"})
+					c.JSON(http.StatusInternalServerError, gin.H{"message": "usersCollection Insert Error"})
 					return
 				}
 				fmt.Println(result)

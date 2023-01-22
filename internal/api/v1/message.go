@@ -1,7 +1,7 @@
 package v1
 
 import (
-	"log"
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -24,7 +24,8 @@ func GetMessagesByUserIdHandler(c *gin.Context) {
 
 	client, ctx, err := db.ConnectDB()
 	if err != nil {
-		log.Fatal(err)
+		c.JSON(http.StatusInternalServerError, gin.H{"messages": fmt.Sprintf("Error connect db, err = %s", err)})
+		return
 	}
 
 	messagesColl := db.GetCollection(client, "messages")
@@ -41,7 +42,7 @@ func GetMessagesByUserIdHandler(c *gin.Context) {
 	// Iterate through the cursor and build the list of messages
 	var messages []bson.M
 	for cursor.Next(ctx) {
-		var message bson.M
+		message := bson.M{}
 		cursor.Decode(&message)
 		messages = append(messages, message)
 	}
